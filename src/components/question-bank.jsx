@@ -13,7 +13,8 @@ export const QuestionBank = () => {
   const[countDown_,setCountdown]=useState();
   const[score,setScore]=useState(0);
   const[total,setTotal]=useState(0);
-
+const[answer_,setAnsswer]=useState(null);
+const[color_,setColor]=useState('');
 
 
 
@@ -66,16 +67,28 @@ const startQuizz=()=>{
 const nextQuestion=()=>{
   setCurrentQuestion(questions[questionIndex+1])
   setQuestionIndex(questionIndex+1);
-
+  let btn=document.getElementsByClassName('question_');
+  for(var i=0; i< btn.length; i++){
+    btn[i].disabled = false;
+    btn[i].style.background='';
+}
 
 
 }
 
 
 const selectAnswer=(e)=>{
+  let btn=document.getElementsByClassName('question_');
+  for(var i=0; i< btn.length; i++){
+    btn[i].disabled = true;
+}
   let selectedOption=e.target.getAttribute('data-option');
+  let optionSelected=document.getElementById(selectedOption);
   if(selectedOption==currentQuestion['options'][currentQuestion['answer']])
   {
+    optionSelected.style.background='green';
+    setAnsswer(selectedOption);
+    setColor('green');
     setScore(score+1)
   console.log('selectedOption',selectedOption)
   console.log('selectedOption',currentQuestion)
@@ -83,6 +96,7 @@ const selectAnswer=(e)=>{
   
   }
   else{
+    optionSelected.style.background='red';
     console.log(' wrong answer');
    
   }
@@ -112,7 +126,7 @@ const selectAnswer=(e)=>{
 
     {currentQuestion['options']?.map((item)=>(
 
-<button className='question_' data-option={item} onClick={selectAnswer}>{item}</button>
+<button className='question_' data-option={item} id={item} style={{background:color_}} onClick={selectAnswer}>{item}</button>
 ))}
 
 
@@ -124,10 +138,7 @@ const selectAnswer=(e)=>{
 
     </div>
     </div>
-    <button className='next-btn'   
-    style={{visibility:questionIndex==questionCount?'hidden':''}}
-    
-    onClick={nextQuestion}>Next</button>
+    <button className='next-btn' style={{visibility:questionIndex==questionCount?'hidden':''}} onClick={nextQuestion}>Next</button>
     
     </div>
   )
