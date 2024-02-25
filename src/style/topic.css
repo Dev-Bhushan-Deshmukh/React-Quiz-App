@@ -1,0 +1,91 @@
+.topic-main-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(73, 0, 18);
+    background-image: url(../assets/Wireframe\ -\ 11.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+
+    display: grid;
+    place-items: center;
+}
+.level{
+    -webkit-box-shadow: inset -1px 0px 18px -13px rgba(125,0,125,1);
+    -moz-box-shadow: inset -1px 0px 18px -13px rgba(125,0,125,1);
+    box-shadow: inset -1px 0px 18px -13px rgba(125,0,125,1);
+  
+
+border-radius: 10px;
+width: 30%;
+height: 70%;
+background-color: white;
+
+
+flex-direction: column;
+display: flex;
+align-items: center;
+
+
+
+}
+.level h1{
+    margin-top: 7%;
+font-size: 1.7vw;
+
+  color:#470858;
+
+}
+.levelbtn{
+    width: 100%;
+    height: 75%;
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.level-btn{
+    letter-spacing: 2px;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.12vw;
+width: 85%;
+cursor: pointer;
+border-radius: 6px;
+height: 16%;
+    background-image: linear-gradient(to right top, #5e075d, #4d085a, #3a0a56, #270a52, #0d0a4c);
+    border: solid 1px rgb(255, 255, 255);
+    -webkit-box-shadow: 6px 5px 29px 0px rgba(5,5,5,0.65);
+    -moz-box-shadow: 6px 5px 29px 0px rgba(5,5,5,0.65);
+    box-shadow: 6px 5px 29px 0px rgba(5,5,5,0.65);
+}
+.level-btn:hover{
+    background-image: linear-gradient(to right top, #ff6b00, #ff5c00, #ff4a00, #ff3402, #ff0808);
+  /* -webkit-box-shadow: 6px 5px 29px 0px rgba(5,5,5,0.65);
+-moz-box-shadow: 6px 5px 29px 0px rgba(5,5,5,0.65);
+box-shadow: 6px 5px 29px 0px rgba(5,5,5,0.65); */
+
+
+
+-webkit-box-shadow: 6px 5px 86px 31px rgba(5,5,5,0.24);
+-moz-box-shadow: 6px 5px 86px 31px rgba(5,5,5,0.24);
+box-shadow: 6px 5px 86px 31px rgba(5,5,5,0.24);
+
+}
+#top-img{
+
+    position: absolute;
+    top: 8%;
+    left: 5%;
+}
+#bottom-img{
+
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
+height: 32%;
+}
