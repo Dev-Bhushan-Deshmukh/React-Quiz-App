@@ -27,9 +27,9 @@ export const Level= () => {
 
 <div className="levelbtn">
 
-<button className='level-btn' value='Easy'  onClick={selectDifficulty} >Easy</button>
-<button className='level-btn' value='Moderate'  onClick={selectDifficulty}>Moderate</button>
-<button className='level-btn' value='Difficult' onClick={selectDifficulty} >Difficult</button>
+<button className='level-btn' value='easy'  onClick={selectDifficulty} >Easy</button>
+<button className='level-btn' value='moderate'  onClick={selectDifficulty}>Moderate</button>
+<button className='level-btn' value='hard' onClick={selectDifficulty} >Difficult</button>
 </div>
 
 

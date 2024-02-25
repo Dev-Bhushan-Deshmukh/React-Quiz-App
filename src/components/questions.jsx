@@ -150,17 +150,7 @@ const nextQuestion=()=>{
   setCurrentQuestion(questions[questionIndex+1])
   setQuestionIndex(questionIndex+1);
 
-// let startCountdown=setInterval(()=>{
-//   if(countDown_==0){
-//     clearInterval(startCountdown);
-    
-//       }
-//       else{
-//         setCountdown(countDown_-1);
-//       }
-     
 
-// }, 1000);
 
 }
 
@@ -202,7 +192,9 @@ else{
 
 
 
-<button  disabled={questionIndex==0?true:false} onClick={previousQuestion}>prev</button><button   disabled={questionIndex==questionCount?true:false} onClick={nextQuestion}>next</button>
+<button  disabled={questionIndex==0?true:false} onClick={previousQuestion}>prev</button>
+
+<button   disabled={questionIndex==questionCount?true:false} onClick={nextQuestion}>next</button>
 
 
 
