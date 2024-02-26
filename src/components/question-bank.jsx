@@ -43,7 +43,8 @@ const[color_,setColor]=useState('');
   //     else if(countDown_==0){
     
   //   setCountdown('time-up!!!')
-    
+  //   nextQuestion();
+  //   //  setCountdown(20);
   //     }
       
   //   }, 1000);
@@ -72,7 +73,7 @@ const nextQuestion=()=>{
     btn[i].disabled = false;
     btn[i].style.background='';
 }
-
+  // setCountdown(20);
 
 }
 
@@ -83,12 +84,13 @@ const selectAnswer=(e)=>{
     btn[i].disabled = true;
 }
   let selectedOption=e.target.getAttribute('data-option');
+  console.log(selectedOption)
   let optionSelected=document.getElementById(selectedOption);
   if(selectedOption==currentQuestion['options'][currentQuestion['answer']])
   {
     optionSelected.style.background='green';
     setAnsswer(selectedOption);
-    setColor('green');
+    // setColor('green');
     setScore(score+1)
   console.log('selectedOption',selectedOption)
   console.log('selectedOption',currentQuestion)
@@ -96,6 +98,7 @@ const selectAnswer=(e)=>{
   
   }
   else{
+     console.log(selectedOption)
     optionSelected.style.background='red';
     console.log(' wrong answer');
    
@@ -117,7 +120,8 @@ const selectAnswer=(e)=>{
   return (
     <div className="levels animate__animated animate__fadeIn animate__delay-1s">
 
-    <label>Question {difficulty} {topicName}{score}/{total}</label>
+
+    <label>Question {difficulty} {topicName}{score}/{total} {countDown_}</label>
     
 
     <div className="quetion-container">
@@ -126,7 +130,7 @@ const selectAnswer=(e)=>{
 
     {currentQuestion['options']?.map((item)=>(
 
-<button className='question_' data-option={item} id={item} style={{background:color_}} onClick={selectAnswer}>{item}</button>
+<button className='question_' data-option={item} id={item}  onClick={selectAnswer}>{item}</button>
 ))}
 
 
