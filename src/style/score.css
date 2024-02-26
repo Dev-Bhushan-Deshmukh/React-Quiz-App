@@ -1,0 +1,72 @@
+.score-board{
+    letter-spacing: 2px;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.12vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+width: 49%;
+cursor: pointer;
+border-radius: 6px;
+height: 55%;
+    background-image: linear-gradient(to right top, #5e075d, #4d085a, #3a0a56, #270a52, #0d0a4c);
+    border: solid 1px rgb(255, 255, 255);
+    -webkit-box-shadow: 6px 5px 29px 0px rgba(5,5,5,0.65);
+    -moz-box-shadow: 6px 5px 29px 0px rgba(5,5,5,0.65);
+    box-shadow: 6px 5px 29px 0px rgba(5,5,5,0.65);
+color: #B2B2B2;
+
+    margin-left: 1%;
+    margin-right: 1%;
+}
+#score-line img{
+
+    height: 100%;
+}
+
+#score-line,#score-comment,#score-count{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    width: 70%;
+    /* background-color: #270a52; */
+}
+#score-line{
+    /* justify-content:space-evenly; */
+    width: 70%;
+    font-size: 1.32vw;
+    /* background-color: #270a52; */
+
+}
+#score-comment{
+    width: 70%;
+font-size: 1vw;
+
+}
+#score-count{
+    font-size: 2vw;
+    width: 70%;
+}
+.score-board img{
+
+margin-left: 5%;
+height: 32%;
+
+}
+.score-board:hover{
+    background-image: linear-gradient(to right top, #ff6b00, #ff5c00, #ff4a00, #ff3402, #ff0808);
+  /* -webkit-box-shadow: 6px 5px 29px 0px rgba(5,5,5,0.65);
+-moz-box-shadow: 6px 5px 29px 0px rgba(5,5,5,0.65);
+box-shadow: 6px 5px 29px 0px rgba(5,5,5,0.65); */
+
+
+
+-webkit-box-shadow: 6px 5px 86px 31px rgba(5,5,5,0.24);
+-moz-box-shadow: 6px 5px 86px 31px rgba(5,5,5,0.24);
+box-shadow: 6px 5px 86px 31px rgba(5,5,5,0.24);
+
+}

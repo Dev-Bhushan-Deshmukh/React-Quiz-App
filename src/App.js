@@ -12,6 +12,8 @@ import { useState } from 'react';
 import { TopicSelection } from './components/topics-selection';
 import { NextLevel } from './components/next-level';
 import { QuestionBank } from './components/question-bank';
+import { ScoreBoard } from './components/score-board';
+import { NextStageButton } from './components/next-stage-button';
 function App() {
   const [difficulty, setdifficulty] = useState();
   return (
@@ -25,9 +27,19 @@ function App() {
         <Route path='/topic/level' element={<Level />} />
 
         <Route path='/topic/topicselection' element={<TopicSelection />} />
-        <Route path='/topic/nextlevel' element={<NextLevel/>} />
-        <Route path='/topic/questionbank' element={<QuestionBank/>} />
+        <Route path='/topic/nextlevel' element={<NextLevel />} >
 
+          <Route path='/topic/nextlevel/score' element={<ScoreBoard />} />
+
+          <Route path='/topic/nextlevel/nextstage' element={<NextStageButton />} />
+
+
+
+
+
+        </Route>
+        <Route path='/topic/questionbank' element={<QuestionBank />} />
+      
 
 
       </Route>

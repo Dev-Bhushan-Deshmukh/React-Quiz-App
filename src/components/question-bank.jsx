@@ -3,8 +3,9 @@ import '../style/questionbank.css'
 import { useContext } from 'react'
 import { MyContext } from '../contexts/difficultycontext'
 import { questions_Bank } from '../data/questionData'
+import { useNavigate } from 'react-router-dom'
 export const QuestionBank = () => {
-
+let navigateTo=useNavigate(null);
 
   const[questions,setQuestions]=useState([]);
   const[currentQuestion,setCurrentQuestion]=useState({});
@@ -79,12 +80,20 @@ const nextQuestion=()=>{
 
 
 const selectAnswer=(e)=>{
+  console.log('---',questionIndex,questionCount)
+if(questionIndex==questionCount){
+  console.log('---',questionIndex,questionCount)
+  navigateTo('/topic/nextlevel')
+
+
+}
+  else{
   let btn=document.getElementsByClassName('question_');
   for(var i=0; i< btn.length; i++){
     btn[i].disabled = true;
 }
   let selectedOption=e.target.getAttribute('data-option');
-  console.log(selectedOption)
+  // console.log(selectedOption)
   let optionSelected=document.getElementById(selectedOption);
   if(selectedOption==currentQuestion['options'][currentQuestion['answer']])
   {
@@ -92,20 +101,20 @@ const selectAnswer=(e)=>{
     setAnsswer(selectedOption);
     // setColor('green');
     setScore(score+1)
-  console.log('selectedOption',selectedOption)
-  console.log('selectedOption',currentQuestion)
-  console.log('correct answer',currentQuestion['options'][currentQuestion['answer']])
+  // console.log('selectedOption',selectedOption)
+  // console.log('selectedOption',currentQuestion)
+  // console.log('correct answer',currentQuestion['options'][currentQuestion['answer']])
   
   }
   else{
-     console.log(selectedOption)
+    //  console.log(selectedOption)
     optionSelected.style.background='red';
-    console.log(' wrong answer');
+    // console.log(' wrong answer');
    
   }
-  
+      
   }
-
+}
 
 
 
