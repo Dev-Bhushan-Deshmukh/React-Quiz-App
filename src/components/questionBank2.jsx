@@ -1,10 +1,10 @@
 import React, { useEffect ,useState} from 'react'
-import '../style/questionbank.css'
+import '../style/questionbank2.css'
 import { useContext } from 'react'
 import { MyContext } from '../contexts/difficultycontext'
 import { questions_Bank } from '../data/questionData'
 import { useNavigate } from 'react-router-dom'
-export const QuestionBank = () => {
+export const QuestionBank2 = () => {
 let navigateTo=useNavigate(null);
 
   const[questions,setQuestions]=useState([]);
@@ -20,11 +20,11 @@ const[color_,setColor]=useState('');
 
 
 
-  const { difficulty, setdifficulty,topicName,setTopic,stageName,setStage} = useContext(MyContext);
+const { difficulty, setdifficulty,topicName,setTopic,stageName,setStage} = useContext(MyContext);
 
 
   useEffect(()=>{
-
+    alert('cc')
     let x=questions_Bank[topicName][difficulty]
     setQuestions(x)
     setQuestionIndex(0)
@@ -60,7 +60,7 @@ console.log(questions_Bank[topicName][difficulty])
 
 
 const startQuizz=()=>{
- 
+  alert('cc')
   setQuestionIndex(0);
   setCountdown(20);
 }
@@ -80,12 +80,12 @@ const nextQuestion=()=>{
 
 
 const selectAnswer=(e)=>{
+  alert('cc')
   console.log('---',questionIndex,questionCount)
 if(questionIndex==questionCount){
   console.log('---',questionIndex,questionCount)
-  setStage('moderate');
+  setStage('questionbank');
   navigateTo('/topic/nextlevel/score/')
-
 
 }
   else{

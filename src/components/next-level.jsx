@@ -10,7 +10,7 @@ export const NextLevel = () => {
     {/* <label>Select Difficulty Level</label> */}
     
     <div className="next-topic-btns">
-      <Outlet/>
+      <Outlet  />
     {/* <NextStageButton/>
     <ScoreBoard/> */}
     {/* <button className='next-level-btn_'>Start Next <img src={nextIcon} alt="" /></button> */}

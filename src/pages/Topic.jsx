@@ -10,13 +10,14 @@ import { Level } from '../components/level-selection';
 export const Topic = () => {
   const[difficulty,setdifficulty]=useState();
   const[topicName,setTopic]=useState();
+  const[stageName,setStage]=useState();
 
 
 
   return (
     <div className='topic-main-container'>
 <img id='top-img' src={bottomImg} />
-<MyContext.Provider   value={{ difficulty, setdifficulty,topicName,setTopic }}>
+<MyContext.Provider   value={{ difficulty, setdifficulty,topicName,setTopic,stageName,setStage }}>
 <Outlet/>
 </MyContext.Provider>
 <img id='bottom-img' src={topImg} />

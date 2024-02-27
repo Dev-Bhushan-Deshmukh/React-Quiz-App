@@ -14,6 +14,7 @@ import { NextLevel } from './components/next-level';
 import { QuestionBank } from './components/question-bank';
 import { ScoreBoard } from './components/score-board';
 import { NextStageButton } from './components/next-stage-button';
+import { QuestionBank2 } from './components/questionBank2';
 function App() {
   const [difficulty, setdifficulty] = useState();
   return (
@@ -29,9 +30,9 @@ function App() {
         <Route path='/topic/topicselection' element={<TopicSelection />} />
         <Route path='/topic/nextlevel' element={<NextLevel />} >
 
-          <Route path='/topic/nextlevel/score' element={<ScoreBoard />} />
+          <Route path='/topic/nextlevel/score/' element={<ScoreBoard />} />
 
-          <Route path='/topic/nextlevel/nextstage' element={<NextStageButton />} />
+          <Route path='/topic/nextlevel/nextstage/' element={<NextStageButton />} />
 
 
 
@@ -39,6 +40,8 @@ function App() {
 
         </Route>
         <Route path='/topic/questionbank' element={<QuestionBank />} />
+
+        <Route path='/topic/moderate' element={<QuestionBank2 />} />
       
 
 
