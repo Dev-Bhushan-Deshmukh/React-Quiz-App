@@ -12,7 +12,7 @@ let navigateTo=useNavigate(null);
   const[questionIndex,setQuestionIndex]=useState();
   const[questionCount,setQuestionout]=useState();
   const[countDown_,setCountdown]=useState();
-  const[score,setScore]=useState(0);
+  // const[score,setScore]=useState(0);
   const[total,setTotal]=useState(0);
 const[answer_,setAnsswer]=useState(null);
 const[color_,setColor]=useState('');
@@ -20,11 +20,12 @@ const[color_,setColor]=useState('');
 
 
 
-const { difficulty, setdifficulty,topicName,setTopic,stageName,setStage} = useContext(MyContext);
+const { difficulty, setdifficulty,topicName,setTopic,stageName,setStage,score,setScore} = useContext(MyContext);
 
 
   useEffect(()=>{
-    alert('cc')
+    setScore(0)
+    // alert('effect')
     let x=questions_Bank[topicName][difficulty]
     setQuestions(x)
     setQuestionIndex(0)
@@ -60,13 +61,14 @@ console.log(questions_Bank[topicName][difficulty])
 
 
 const startQuizz=()=>{
-  alert('cc')
+  // alert('start')
   setQuestionIndex(0);
   setCountdown(20);
 }
 
 
 const nextQuestion=()=>{
+  // alert('next q')
   setCurrentQuestion(questions[questionIndex+1])
   setQuestionIndex(questionIndex+1);
   let btn=document.getElementsByClassName('question_');
@@ -80,7 +82,7 @@ const nextQuestion=()=>{
 
 
 const selectAnswer=(e)=>{
-  alert('cc')
+  alert('ansss')
   console.log('---',questionIndex,questionCount)
 if(questionIndex==questionCount){
   console.log('---',questionIndex,questionCount)

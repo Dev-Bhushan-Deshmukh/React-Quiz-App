@@ -10,7 +10,7 @@ export const TopicSelection = () => {
 function navigateToQuestionBank(e){
 setTopic(e.target.value)
 
-navigateTo('/topic/moderate')
+navigateTo('/topic/questionbank')
 
 }
 

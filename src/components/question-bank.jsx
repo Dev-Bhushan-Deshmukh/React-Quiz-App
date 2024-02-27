@@ -12,7 +12,7 @@ let navigateTo=useNavigate(null);
   const[questionIndex,setQuestionIndex]=useState();
   const[questionCount,setQuestionout]=useState();
   const[countDown_,setCountdown]=useState();
-  const[score,setScore]=useState(0);
+  // const[score,setScore]=useState(0);
   const[total,setTotal]=useState(0);
 const[answer_,setAnsswer]=useState(null);
 const[color_,setColor]=useState('');
@@ -20,11 +20,11 @@ const[color_,setColor]=useState('');
 
 
 
-  const { difficulty, setdifficulty,topicName,setTopic,stageName,setStage} = useContext(MyContext);
+  const { difficulty, setdifficulty,topicName,setTopic,stageName,setStage,score,setScore} = useContext(MyContext);
 
 
   useEffect(()=>{
-
+    setScore(0)
     let x=questions_Bank[topicName][difficulty]
     setQuestions(x)
     setQuestionIndex(0)
